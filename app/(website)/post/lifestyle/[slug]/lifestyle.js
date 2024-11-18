@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/container";
@@ -8,6 +9,14 @@ import { parseISO, format } from "date-fns";
 import AuthorCard from "@/components/blog/authorCard";
 
 export default function Post(props) {
+
+  const pricingClick = () => {
+    window.open("https://studio3fit.com/pricing", "_blank");
+  };
+
+  const offersClick = () => {
+    window.open("https://studio3fit.com/offers", "_blank");
+  };
   const { loading, post } = props;
 
   const slug = post?.slug;
@@ -96,6 +105,22 @@ export default function Post(props) {
           <div className="prose prose-lg mx-auto my-3 dark:prose-invert prose-a:text-blue-500">
             {post.body && <PortableText value={post.body} />}
           </div>
+          {/* pricing CTAs */}
+          <div className="mb-7 mt-7 flex w-full flex-col justify-start gap-4 sm:flex-row">
+            <button
+            onClick={pricingClick}
+              type="button"
+              class="text-md haas-medium inline-flex w-full items-center justify-center gap-x-2 rounded-full border border-transparent bg-white px-12 py-5 font-medium text-black hover:bg-neutral-100 focus:outline-none disabled:pointer-events-none disabled:opacity-50 sm:w-auto">
+              2-Weeks for $20
+            </button>
+            {/* join cta */}
+            <button
+              type="button"
+              class="text-md haas-medium inline-flex w-full items-center justify-center gap-x-2 rounded-full border-2 border-white bg-transparent px-12 py-5 font-medium text-white focus:outline-none disabled:pointer-events-none disabled:opacity-50 sm:w-auto">
+              Join Now — 50% Off
+            </button>
+          </div>
+          {/* pricing CTAs */}
           <div className="mb-7 mt-7 flex justify-center">
             <Link
               href="/"
