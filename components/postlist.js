@@ -87,14 +87,7 @@ export default function PostList({
                 href={`/post/${pathPrefix ? `${pathPrefix}/` : ""}${
                   post.slug?.current
                 }`}>
-                <span
-                  className="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom
-      bg-no-repeat
-      transition-[background-size]
-      duration-500
-      hover:bg-[length:100%_3px]
-      group-hover:bg-[length:100%_10px]
-      dark:from-purple-800 dark:to-purple-900">
+                <span>
                   {post.title}
                 </span>
               </Link>

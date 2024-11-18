@@ -7,19 +7,22 @@ export default function Post({ posts }) {
     <>
       {posts && (
         <Container>
-          <div className="grid gap-10 md:grid-cols-2 lg:gap-10 ">
-            {posts.slice(0, 2).map(post => (
+          <div className="mt-5 flex items-center justify-center ">
+            <h1 className="text-brand-primary text-3xl font-semibold tracking-tight dark:text-white lg:text-5xl lg:leading-tight">
+              Our Blog
+            </h1>
+          </div>
+          <div className="mt-14 grid gap-10 lg:gap-10 ">
+            {posts.map(post => (
               <PostList
                 key={post._id}
                 post={post}
+                minimal={true}
                 aspect="landscape"
+                pathPrefix="lifestyle"
+                fontWeight="large"
                 preloadImage={true}
               />
-            ))}
-          </div>
-          <div className="mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3 ">
-            {posts.slice(2, 14).map(post => (
-              <PostList key={post._id} post={post} aspect="square" />
             ))}
           </div>
           <div className="mt-10 flex justify-center">

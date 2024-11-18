@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "NeueHaasDisplayMedium";
+  src: url("https://ik.imagekit.io/is20rnl48/Fonts/neuehaasdisplaymediu-webfont.woff2?updatedAt=1726431863315")
+    format("woff2");
+  font-display: swap;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "NeueHaasDisplayBold";
+  src: url("https://ik.imagekit.io/is20rnl48/Fonts/neuehaasdisplaybold-webfont.woff2?updatedAt=1726431862324")
+    format("woff2");
+  font-display: swap;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "NeueHaasDisplayRoman";
+  src: url("https://ik.imagekit.io/is20rnl48/Fonts/neuehaasdisplayroman-webfont.woff2?updatedAt=1726431862270")
+    format("woff2");
+  font-display: swap;
+  font-weight: 400;
+}
+
+.haas-medium {
+  font-family: "NeueHaasDisplayMedium", sans-serif !important;
+  line-height: 1.2 !important;
+}
+
+.haas-bold {
+  font-family: "NeueHaasDisplayBold", sans-serif !important;
+ 
+}
+
+.haas-roman {
+  font-family: "NeueHaasDisplayRoman", sans-serif !important;
+}
