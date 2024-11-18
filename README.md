@@ -112,7 +112,7 @@ To revalidate the cache when a post is updated, You should set up to receive a v
 12. API version: v2021-03-25
 13. Include drafts: No
 14. Secret: Set to the same value as SANITY_REVALIDATE_SECRET (create a random one if you haven't)
-15. Save the cofiguration
+15. Save the configuration
 16. Add the secret to Vercel: `npx vercel env add SANITY_REVALIDATE_SECRET`
 17. Redeploy with `npx vercel --prod` to apply the new environment variable
 
