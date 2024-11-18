@@ -26,14 +26,14 @@ async function sharedMetaData(params: any) {
     title: {
       default:
         settings?.title ||
-        "Stablo Pro - Blog Template for Next.js & Sanity CMS",
+        "Studio3 Fitness | Personal Training, Group Fitness, and Nutrition",
       template: "%s | Stablo"
     },
     description:
       settings?.description ||
-      "Pro version of Stablo, popular open-source next.js and sanity blog template",
-    keywords: ["Next.js", "Sanity", "Tailwind CSS"],
-    authors: [{ name: "Surjith" }],
+      "Studio3 Fitness is a boutique fitness studio located in the heart of downtown Queen Anne, Seattle. We offer personal training, group fitness classes, and nutrition coaching.",
+    keywords: ["fitness", "personal training", "group fitness", "nutrition"],
+    authors: [{ name: "Studio3 Team" }],
     canonical: settings?.url,
     openGraph: {
       images: [
@@ -47,7 +47,7 @@ async function sharedMetaData(params: any) {
       ]
     },
     twitter: {
-      title: settings?.title || "Stablo Template",
+      title: settings?.title || "Studio3 Fitness",
       card: "summary_large_image"
     },
     robots: {

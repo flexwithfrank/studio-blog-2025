@@ -6,7 +6,8 @@ export default function Label(props) {
     blue: "text-blue-600",
     orange: "text-orange-700",
     purple: "text-purple-600",
-    pink: "text-pink-600"
+    pink: "text-pink-600",
+    white: "text-white",
   };
   const bgcolor = {
     green: "bg-emerald-50",
@@ -31,7 +32,7 @@ export default function Label(props) {
   return (
     <span
       className={cx(
-        "inline-block text-sm haas-bold font-medium",
+        "inline-block text-xs haas-bold font-bold bg-white/10 px-4 py-1 rounded-full",
         !margin && " mt-5",
         color[props.color] || color[pink]
       )}>
