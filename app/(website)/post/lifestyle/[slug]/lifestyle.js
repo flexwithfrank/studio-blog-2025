@@ -110,14 +110,14 @@ export default function Post(props) {
             <button
             onClick={pricingClick}
               type="button"
-              class="text-md haas-medium inline-flex w-full items-center justify-center gap-x-2 rounded-full border border-transparent bg-white px-12 py-5 font-medium text-black hover:bg-neutral-100 focus:outline-none disabled:pointer-events-none disabled:opacity-50 sm:w-auto">
+              class="text-md haas-medium inline-flex w-full items-center justify-center gap-x-2 rounded-full border-2 border-black bg-white px-12 py-5 font-medium text-black hover:bg-neutral-100 focus:outline-none disabled:pointer-events-none disabled:opacity-50 sm:w-auto dark:border-black">
               2-Weeks for $20
             </button>
             {/* join cta */}
             <button
             onClick={offersClick}
               type="button"
-              class="text-md haas-medium inline-flex w-full items-center justify-center gap-x-2 rounded-full border-2 border-white bg-transparent px-12 py-5 font-medium text-white focus:outline-none disabled:pointer-events-none disabled:opacity-50 sm:w-auto">
+              class="text-md haas-medium inline-flex w-full items-center justify-center gap-x-2 rounded-full border-2 border-black dark:border-white bg-black px-12 py-5 font-medium text-white dark:text-white focus:outline-none disabled:pointer-events-none disabled:opacity-50 sm:w-auto">
               Join Now — 50% Off
             </button>
           </div>

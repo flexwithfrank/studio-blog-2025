@@ -8,8 +8,8 @@ export default function Post({ posts }) {
       {posts && (
         <Container>
           <div className="mt-5 flex items-center justify-center ">
-            <h1 className="text-brand-primary text-3xl font-semibold tracking-tight dark:text-white lg:text-5xl lg:leading-tight">
-              Our Blog
+            <h1 className="text-brand-primary text-4xl font-semibold tracking-tight dark:text-white lg:text-5xl lg:leading-tight haas-bold">
+              Check out our latest blog posts
             </h1>
           </div>
           <div className="mt-14 grid gap-10 lg:gap-10 ">
@@ -19,7 +19,7 @@ export default function Post({ posts }) {
                 post={post}
                 minimal={true}
                 aspect="landscape"
-                pathPrefix="lifestyle"
+                pathPrefix="sidebar"
                 fontWeight="large"
                 preloadImage={true}
               />

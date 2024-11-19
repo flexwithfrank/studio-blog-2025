@@ -10,9 +10,17 @@ import cx from "clsx";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 export default function Navbar(props) {
+  const pricingClick = () => {
+    window.open("https://studio3fit.com/pricing", "_blank");
+  };
+
+  const offersClick = () => {
+    window.open("https://studio3fit.com/offers", "_blank");
+  };
+
   const leftmenu = [
     {
-      label: "Home",
+      label: "Back to Studio3",
       href: "#",
       children: [
         { title: "Home Default", path: "/" },
@@ -88,28 +96,27 @@ export default function Navbar(props) {
         <Disclosure>
           {({ open }) => (
             <>
-              <div className="flex flex-wrap justify-between md:flex-nowrap md:gap-10">
-                <div className="order-1 hidden w-full flex-col items-center justify-start md:order-none md:flex md:w-auto md:flex-1 md:flex-row md:justify-end">
-                  {leftmenu.map((item, index) => (
-                    <Fragment key={`${item.label}${index}`}>
-                      {item.children && item.children.length > 0 ? (
-                        <DropdownMenu
-                          menu={item}
-                          key={`${item.label}${index}`}
-                          items={item.children}
-                        />
-                      ) : (
-                        <Link
-                          href={item.href}
-                          key={`${item.label}${index}`}
-                          className="px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
-                          target={item.external ? "_blank" : ""}
-                          rel={item.external ? "noopener" : ""}>
-                          {item.label}
-                        </Link>
-                      )}
-                    </Fragment>
-                  ))}
+              <div className="haas-medium flex flex-wrap justify-start md:flex-nowrap md:gap-10">
+                <div className="order-1 hidden w-full flex-col items-center justify-start md:order-none md:flex md:w-auto md:flex-1 md:flex-row md:justify-start">
+                  <button
+                    type="button"
+                    class="dark:text-whitefocus:outline-none haas-medium inline-flex items-center rounded-lg px-5 py-2.5 text-center text-sm font-medium text-black focus:ring-0 dark:text-white">
+                    <svg
+                      class="mr-2 h-3.5 w-3.5 rotate-180"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 14 10">
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9"
+                      />
+                    </svg>
+                    Back to Studio3
+                  </button>
                 </div>
                 <div className="flex w-full items-center justify-between md:w-auto">
                   <Link href="/" className="w-28 dark:hidden">
@@ -122,7 +129,7 @@ export default function Navbar(props) {
                       />
                     ) : (
                       <span className="block text-center">
-                        Stablo
+                        Studio3
                       </span>
                     )}
                   </Link>
@@ -136,7 +143,7 @@ export default function Navbar(props) {
                       />
                     ) : (
                       <span className="block text-center">
-                        Stablo
+                        Studio3
                       </span>
                     )}
                   </Link>
@@ -164,27 +171,19 @@ export default function Navbar(props) {
                   </Disclosure.Button>
                 </div>
 
-                <div className="order-2 hidden w-full flex-col items-center justify-start md:order-none md:flex md:w-auto md:flex-1 md:flex-row">
-                  {rightmenu.map((item, index) => (
-                    <Fragment key={`${item.label}${index}`}>
-                      {item.children && item.children.length > 0 ? (
-                        <DropdownMenu
-                          menu={item}
-                          key={`${item.label}${index}`}
-                          items={item.children}
-                        />
-                      ) : (
-                        <Link
-                          href={item.href}
-                          key={`${item.label}${index}`}
-                          className="px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
-                          target={item.external ? "_blank" : ""}
-                          rel={item.external ? "noopener" : ""}>
-                          {item.label}
-                        </Link>
-                      )}
-                    </Fragment>
-                  ))}
+                <div className="order-2 hidden w-full flex-col items-center justify-end md:order-none md:flex md:w-auto md:flex-1 md:flex-row gap-3">
+                  <button
+                    onClick={offersClick}
+                    type="button"
+                    class="haas-medium inline-flex w-full items-center justify-center gap-x-2 rounded-full border-2 border-black bg-black px-6 py-2.5 text-sm font-medium text-white focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-white dark:text-white sm:w-auto">
+                    Trial
+                  </button>
+                  <button
+                    onClick={pricingClick}
+                    type="button"
+                    class="text-md haas-medium inline-flex w-full items-center justify-center gap-x-2 rounded-full border-2 border-black bg-white px-6 py-2.5 font-medium text-black hover:bg-neutral-100 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-black sm:w-auto">
+                    Join Now
+                  </button>
                 </div>
               </div>
               <Disclosure.Panel>
