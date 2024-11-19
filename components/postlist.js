@@ -80,7 +80,7 @@ export default function PostList({
                     : "text-lg",
                 fontWeight === "normal"
                   ? "line-clamp-2 font-medium  tracking-normal text-black"
-                  : "font-semibold leading-snug tracking-tight",
+                  : "font-semibold leading-snug tracking-normal haas-medium",
                 "mt-2    dark:text-white"
               )}>
               <Link
@@ -107,7 +107,7 @@ export default function PostList({
             <div className="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400">
               <Link href={`/author/${post.author?.slug?.current}`}>
                 <div className="flex items-center gap-3">
-                  <div className="relative h-5 w-5 flex-shrink-0">
+                  <div className="relative h-5 w-5 flex-shrink-0 haas-roman">
                     {post.author?.image && (
                       <Image
                         src={AuthorimageProps.src}
@@ -119,7 +119,7 @@ export default function PostList({
                       />
                     )}
                   </div>
-                  <span className="truncate text-sm">
+                  <span className="truncate text-sm haas-roman">
                     {post.author?.name}
                   </span>
                 </div>
@@ -128,7 +128,7 @@ export default function PostList({
                 &bull;
               </span>
               <time
-                className="truncate text-sm"
+                className="truncate text-sm haas-roman"
                 dateTime={post?.publishedAt || post._createdAt}>
                 {format(
                   parseISO(post?.publishedAt || post._createdAt),

@@ -71,7 +71,7 @@ export default function Post(props) {
                     </Link>
                   )}
                 </div>
-                <p className="text-gray-100 ">
+                <p className="text-gray-100 haas-roman">
                   <Link href={`/author/${post.author.slug.current}`}>
                     {post.author.name}
                   </Link>{" "}
@@ -80,16 +80,16 @@ export default function Post(props) {
               </div>
 
               <div>
-                <div className="flex space-x-2 text-sm md:flex-row md:items-center">
+                <div className="flex space-x-2 text-sm md:flex-row md:items-center haas-roman">
                   <time
-                    className="text-gray-100 "
+                    className="text-gray-100 haas-roman"
                     dateTime={post?.publishedAt || post._createdAt}>
                     {format(
                       parseISO(post?.publishedAt || post._createdAt),
                       "MMMM dd, yyyy"
                     )}
                   </time>
-                  <span className="text-gray-100">
+                  <span className="text-gray-100 haas-roman">
                     · {post.estReadingTime || "5"} min read
                   </span>
                 </div>
